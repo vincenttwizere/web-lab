@@ -25,10 +25,15 @@ body {
   padding: 0.5em 2em;
   box-shadow: 0 2px 6px rgba(34,153,84,0.1);
 }
-.navbar-logo {
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 2em;
 }
+
 .logo-text {
   font-size: 2em;
   font-weight: bold;
@@ -37,14 +42,17 @@ body {
   font-family: 'Segoe UI', Arial, sans-serif;
   text-shadow: 1px 1px 4px #22995444;
 }
+.navbar-links-wrapper {
+  display: flex;
+  align-items: center;
+}
 .navbar-links {
   list-style: none;
   display: flex;
-  flex-direction: column;
-  gap: 1em;
+  flex-direction: row;
+  gap: 2em;
   margin: 0;
   padding: 0;
-  align-items: flex-end;
 }
 .navbar-links li {
   display: flex;
