@@ -10,6 +10,9 @@
   display: flex;
   justify-content: space-between;
   color: black;
+  background-color: whitesmoke;
+  position: fixed;
+  width: 100%;
  }
 
  .logo-text {
@@ -45,30 +48,24 @@
     transition: background 0.2s, color 0.2s;
 }
 
-
-body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: linear-gradient(to bottom, #e9f7ef 0%, #d4efdf 100%);
-  margin: 0;
-  padding: 0;
-  color: #145a32;
-}
-
-
-
 /* Hero section styles */
 .hero {
-  background: url(./Assets/for-avitourists-over.jpg) no-repeat center center/cover;
-  padding: 3em 0 2em 0;
+  background: url(./Assets/bird-8788491_1280-removebg-preview.png) no-repeat center center/cover;
   text-align: center;
   max-width: 100%;
   height:90vh;
+  display: flex;
+  justify-content: left;
+  position: relative;
+  /* padding: 180px 20px 20px 60px;  */
 }
 .hero-content h1 {
   color: #229954;
   font-size: 2.5em;
+  padding: 180px 20px 20px 60px;
   margin-bottom: 0.5em;
 }
+
 .hero-content p {
   font-size: 1.2em;
   margin-bottom: 1.5em;
@@ -156,3 +153,4 @@ footer {
   margin-top: 2em;
   letter-spacing: 1px;
 }
+
