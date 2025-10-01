@@ -1,12 +1,50 @@
-.logo-text {
-  font-size: 2em;
-  font-weight: bold;
-  color: #fff;
-  letter-spacing: 3px;
-  margin-right: 0.7em;
+* {
+ 	box-sizing: border-box;
   font-family: 'Segoe UI', Arial, sans-serif;
-  text-shadow: 1px 1px 4px #22995444;
+ 	margin: 0;
+ 	padding: 0;
+ }
+
+/* styling the navigation bar */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  color: black;
+ }
+
+ .logo-text {
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    padding: 20px 0px 20px 60px;
+ }
+
+ .navbar-links-wrapper {
+    display: flex;
+    align-items: center;
+ }
+
+ .navbar-links{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-right: 60px;
+ }
+.navbar-links li {
+      text-decoration: none;
+      color: black;
+  }
+
+.navbar-links li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
 }
+
 
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
@@ -16,67 +54,15 @@ body {
   color: #145a32;
 }
 
-/* Navbar styles */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #229954;
-  padding: 0.5em 2em;
-  box-shadow: 0 2px 6px rgba(34,153,84,0.1);
-}
-.navbar-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2em;
-}
 
-.logo-text {
-  font-size: 2em;
-  font-weight: bold;
-  color: #fff;
-  letter-spacing: 3px;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  text-shadow: 1px 1px 4px #22995444;
-}
-.navbar-links-wrapper {
-  display: flex;
-  align-items: center;
-}
-.navbar-links {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  gap: 2em;
-  margin: 0;
-  padding: 0;
-}
-.navbar-links li {
-  display: flex;
-  align-items: center;
-}
-.navbar-links li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1em;
-  padding: 0.3em 0.8em;
-  border-radius: 6px;
-  transition: background 0.2s, color 0.2s;
-}
-.navbar-links li a:hover {
-  background: #145a32;
-  color: #d4efdf;
-}
 
 /* Hero section styles */
 .hero {
-  background: linear-gradient(to right, #d4efdf 60%, #e9f7ef 100%);
+  background: url(./Assets/for-avitourists-over.jpg) no-repeat center center/cover;
   padding: 3em 0 2em 0;
   text-align: center;
+  max-width: 100%;
+  height:90vh;
 }
 .hero-content h1 {
   color: #229954;
