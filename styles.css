@@ -1,3 +1,31 @@
+.hero-content h1 {
+  text-align: left;
+  margin-left: 0;
+  padding-left: 0.5em;
+  font-size: 2.5em;
+  line-height: 1.2;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: heroFadeUp 1.2s cubic-bezier(.77,0,.18,1) 0.8s forwards;
+}
+
+@keyframes heroFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero-content h1 {
+  text-align: left;
+  margin-left: 0;
+  padding-left: 0.5em;
+  font-size: 2.5em;
+  line-height: 1.2;
+}
 * {
  	box-sizing: border-box;
   font-family: 'Segoe UI', Arial, sans-serif;
@@ -51,24 +79,27 @@
 /* Hero section styles */
 .hero {
   background: url(./Assets/bird-8788491_1280-removebg-preview.png) no-repeat center center/cover;
+  background-size: contain;
   text-align: center;
   max-width: 100%;
   height:90vh;
   display: flex;
   justify-content: left;
   position: relative;
-  /* padding: 180px 20px 20px 60px;  */
 }
 .hero-content h1 {
   color: #229954;
   font-size: 2.5em;
   padding: 180px 20px 20px 60px;
   margin-bottom: 0.5em;
+  line-height: 1.2;
+  
 }
 
-.hero-content p {
+span {
   font-size: 1.2em;
-  margin-bottom: 1.5em;
+  font-weight: bold;
+  margin-left: 60px;
 }
 .hero-content img {
   border-radius: 16px;
@@ -140,6 +171,7 @@ button {
   cursor: pointer;
   font-weight: bold;
   transition: background 0.2s;
+  margin-top: 2.5em;
 }
 button:hover {
   background: #145a32;
