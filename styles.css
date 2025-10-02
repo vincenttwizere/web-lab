@@ -1,3 +1,60 @@
+/* Services section styles */
+.services-heading {
+  text-align: center;
+  color: #229954;
+  font-size: 2.2em;
+  font-weight: 700;
+  margin-bottom: 2em;
+  margin-top: 0;
+  letter-spacing: 2px;
+}
+.services-cards {
+  display: flex;
+  gap: 2.5em;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin-bottom: 2em;
+}
+.service-card {
+  background: #e9f7ef;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(34,153,84,0.10);
+  padding: 2em 1.5em 1.5em 1.5em;
+  max-width: 320px;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.service-card:hover {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 6px 24px rgba(34,153,84,0.18);
+}
+.service-icon {
+  font-size: 2.5em;
+  margin-bottom: 0.7em;
+}
+.service-card img {
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(34,153,84,0.12);
+  margin-bottom: 1em;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+.service-text h3 {
+  color: #229954;
+  font-size: 1.3em;
+  margin-bottom: 0.5em;
+}
+.service-text p {
+  color: #145a32;
+  font-size: 1em;
+  line-height: 1.6;
+}
 /* Specific style for Conservation - Recreation - Education line in hero */
 .hero-content .hero-subtitle {
   display: block;
