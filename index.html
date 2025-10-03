@@ -19,6 +19,7 @@
 								<li><a href="#home">Home</a></li>
 								<li><a href="#about">About Us</a></li>
 								<li><a href="#services">Services</a></li>
+								<li><a href="#gallery">Gallery</a></li>
 								<li><a href="#contact">Contact</a></li>
 							</ul>
 						</div>
@@ -85,34 +86,38 @@
 				</div>
 			</section>
 				 
-					<section id="services">
+					<section id="gallery">
 						<h2 class="gallery-heading">Gallery</h2>
-						<div class="gallery-cards">
-							<div class="gallery-card">
-								<img src="./Assets/bird-8788491_1280.jpg" alt="Birds" class="gallery-img">
-								<div class="gallery-caption">Birds</div>
+						<div class="gallery-flex">
+								<div class="gallery-row">
+									<div class="gallery-card">
+										<img src="./Assets/bird-8788491_1280.jpg" alt="Birds" class="gallery-img">
+										<div class="gallery-caption">Birds</div>
+									</div>
+									<div class="gallery-card">
+										<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Monkey" class="gallery-img">
+										<div class="gallery-caption">Monkey</div>
+									</div>
+									<div class="gallery-card">
+										<img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80" alt="Cat" class="gallery-img">
+										<div class="gallery-caption">Cat</div>
+									</div>
+								</div>
+								<div class="gallery-row">
+									<div class="gallery-card">
+										<img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Dog" class="gallery-img">
+										<div class="gallery-caption">Dog</div>
+									</div>
+									<div class="gallery-card">
+										<img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Wetland" class="gallery-img">
+										<div class="gallery-caption">Wetland</div>
+									</div>
+									<div class="gallery-card">
+										<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Nature" class="gallery-img">
+										<div class="gallery-caption">Nature</div>
+									</div>
+								</div>
 							</div>
-							<div class="gallery-card">
-								<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Monkey" class="gallery-img">
-								<div class="gallery-caption">Monkey</div>
-							</div>
-							<div class="gallery-card">
-								<img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80" alt="Cat" class="gallery-img">
-								<div class="gallery-caption">Cat</div>
-							</div>
-							<div class="gallery-card">
-								<img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Dog" class="gallery-img">
-								<div class="gallery-caption">Dog</div>
-							</div>
-							<div class="gallery-card">
-								<img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Wetland" class="gallery-img">
-								<div class="gallery-caption">Wetland</div>
-							</div>
-							<div class="gallery-card">
-								<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Nature" class="gallery-img">
-								<div class="gallery-caption">Nature</div>
-							</div>
-						</div>
 					</section>
 
 					<section id="contact">
@@ -123,12 +128,11 @@
 							</div>
 							<div class="contact-form-wrapper">
 								<form>
-									<input type="text" placeholder="Your name">
-									<input type="email" placeholder="Your email">
-									<input type="tel" placeholder="Your phone">
-									<input type="text" placeholder="Subject">
-									<textarea placeholder="Your message" rows="4" cols="30"></textarea>
-									<button type="submit">Submit</button>
+									  <input type="text" placeholder="Your name">
+									  <input type="email" placeholder="Your email">
+									  <input type="text" placeholder="Subject">
+									  <textarea placeholder="Your message" rows="4" cols="30"></textarea>
+									  <button type="submit">Submit</button>
 								</form>
 							</div>
 						</div>
@@ -136,14 +140,27 @@
 				</main>
 
 				<footer class="footer-modern">
-					<div class="footer-content">
-						<div class="footer-brand">Cravings Urban Wetland Eco-Tourism</div>
-						<ul class="footer-links">
-							<li><a href="#home">Home</a></li>
-							<li><a href="#about">About Us</a></li>
-							<li><a href="#services">Services</a></li>
-							<li><a href="#contact">Contact</a></li>
-						</ul>
-						<div class="footer-copy">&copy; 2025 Cravings. All rights reserved.</div>
-					</div>
+					   <div class="footer-content" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2em; max-width: 1100px; margin: 0 auto;">
+						   <div class="footer-about" style="flex: 1 1 220px; min-width: 220px;">
+							   <div class="footer-brand" style="font-size: 1.4em; font-weight: 700; letter-spacing: 2px; margin-bottom: 0.5em;">About Us</div>
+							   <div class="footer-summary" style="font-size: 1em; opacity: 0.9;">Cravings Urban Wetland Eco-Tourism connects people with nature through conservation, recreation, and education. We inspire visitors to appreciate and protect our vibrant wetland park and its wildlife.</div>
+						   </div>
+						   <div class="footer-links-section" style="flex: 1 1 180px; min-width: 180px;">
+							   <div class="footer-brand" style="font-size: 1.2em; font-weight: 700; margin-bottom: 0.5em;">Quick Links</div>
+							   <ul class="footer-links" style="list-style: none; padding: 0; margin: 0;">
+								   <li><a href="#home">Home</a></li>
+								   <li><a href="#about">About Us</a></li>
+								   <li><a href="#services">Services</a></li>
+							   </ul>
+						   </div>
+						   <div class="footer-contact" style="flex: 1 1 220px; min-width: 220px;">
+							   <div class="footer-brand" style="font-size: 1.2em; font-weight: 700; margin-bottom: 0.5em;">Contact Us</div>
+							   <div class="footer-contact-info" style="font-size: 1em; opacity: 0.9;">
+								   <div>Email: <a href="mailto:info@cravingswetland.com" style="color: #fff; text-decoration: underline;">info@cravingswetland.com</a></div>
+								   <div>Phone: <a href="tel:+250788123456" style="color: #fff; text-decoration: underline;">+250 788 123 456</a></div>
+								   <div>Address: Cravings Eco Park, Kigali, Rwanda</div>
+							   </div>
+						   </div>
+					   </div>
+					   <div class="footer-copy" style="text-align: center; margin-top: 1.5em; font-size: 1em; opacity: 0.8;">&copy; 2025 Cravings. All rights reserved.</div>
 				</footer>
