@@ -121,6 +121,7 @@ html {
   padding: 10px 15px;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  cursor: pointer;
 }
 
 /* 2. Hero section styles */
@@ -448,6 +449,8 @@ section h2 {
   background: #229954;
   color: #fff;
   box-shadow: 0 2px 8px #22995444;
+  cursor: pointer;
+  cursor: pointer;
 }
 .footer-copy {
   font-size: 1em;
