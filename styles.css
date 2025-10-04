@@ -121,6 +121,7 @@ html {
   padding: 10px 15px;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  cursor: pointer;
 }
 
 /* 2. Hero section styles */
