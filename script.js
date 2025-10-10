@@ -50,7 +50,10 @@ console.log(`${typeof favoritePlayer}`);
  console.log('hello ' + name);
 
 // accepting user input
-let userName = window.prompt('what is your name?');
+
+const prompt = require('prompt-sync')();
+
+let userName = prompt('what is your name?');
 console.log(userName);
 
-let userAge = window.prompt('how old are you?');
+let userAge = prompt('how old are you?');
