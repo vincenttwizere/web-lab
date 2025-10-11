@@ -85,9 +85,39 @@ if (age >= 18){
 
 // logic operators
 
-let n = 10;
+let n = prompt('enter a number between 1 and 10');
 if (n > 0 && n <= 10){
    console.log(`${n} is between 1 and 10`);
 } else {
    console.log(`${n} is not between 1 and 10`);
 }
+
+
+// building a simple grading system
+
+// Ask the user for their score
+let score = prompt("Enter your exam score (0–100):");
+
+// Convert the input to a number
+score = Number(score);
+
+// Check and display the grade with comments
+if (score >= 90 && score <= 100) {
+  console.log("Grade: A");
+  console.log("Excellent work! 🎉 Keep it up!");
+} else if (score >= 80 && score < 90) {
+  console.log("Grade: B");
+  console.log("Great job! You did really well.");
+} else if (score >= 70 && score < 80) {
+  console.log("Grade: C");
+  console.log("Good effort! A little more practice and you’ll improve.");
+} else if (score >= 60 && score < 70) {
+  console.log("Grade: D");
+  console.log("You passed, but there’s room for improvement.");
+} else if (score >= 0 && score < 60) {
+  console.log("Grade: F");
+  console.log("Unfortunately, you didn’t pass. Review your notes and try again.");
+} else {
+  console.log("Invalid score! Please enter a number between 0 and 100.");
+}
+// end of grading system
