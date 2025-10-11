@@ -57,3 +57,37 @@ let userName = prompt('what is your name?');
 console.log(userName);
 
 let userAge = prompt('how old are you?');
+
+// type conversion
+
+let number = 5;
+console.log(typeof(number));
+
+const x = 5;
+const y = '5';
+
+const result = x + y;
+console.log(result);
+console.log(typeof(result));
+console.log(typeof(x));
+console.log(typeof(y));
+
+// a simple program to determine if a user is old enough to drive
+
+let age = prompt('how old are you?');
+age = Number(age);
+
+if (age >= 18){
+   console.log('you are old enough to drive');
+} else {
+   console.log('you are not old enough to drive');
+}
+
+// logic operators
+
+let n = 10;
+if (n > 0 && n <= 10){
+   console.log(`${n} is between 1 and 10`);
+} else {
+   console.log(`${n} is not between 1 and 10`);
+}
