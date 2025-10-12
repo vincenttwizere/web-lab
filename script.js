@@ -33,8 +33,8 @@ console.log(`${typeof favoritePlayer}`);
 
 // modifying the content of a html element using javascript
 
-// document.getElementById('title').textContent = 'wagwan';
-// document.getElementById('title').style.color = 'red';
+document.getElementById('title').textContent = 'wagwan';
+document.getElementById('title').style.color = 'red';
 
 // arthmetic operators
 
