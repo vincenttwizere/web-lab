@@ -16,7 +16,8 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    padding: 20px 20px;
+    padding: 20px 60px;
+    font-size: 1.5rem;
 }
 
 .navbar ul {
@@ -140,9 +141,10 @@ button:hover,
     max-width: 100%;
 }
 .about-img {
-    width: 220px;
-    height: 220px;
-    object-fit: cover;
+    width: 320px;
+    height: 320px;
+    border: 4px solid #ddd;
+    object-fit: contain;
     border-radius: 50%;
     box-shadow: 0 4px 16px rgba(0,0,0,0.08);
 }
@@ -156,7 +158,6 @@ button:hover,
 
 /* Projects Section */
 #projects {
-    background: #fff;
     padding: 60px 0;
     text-align: center;
 }
@@ -169,28 +170,22 @@ button:hover,
 .projects-container {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
     flex-wrap: wrap;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 24px;
-    padding-right: 24px;
+    max-width: 100%;
 }
 .project-card {
-    background: #f7f7f7;
-    border-radius: 16px;
+    background: white;
+    border-radius: 10px;
     box-shadow: 0 4px 16px rgba(0,0,0,0.08);
     padding: 30px 24px;
-    width: 280px;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    width: 320px;
+    text-align: center;
     transition: box-shadow 0.3s;
 }
 .project-card:hover {
     box-shadow: 0 8px 24px rgba(44, 62, 80, 0.15);
+    
 }
 .project-card h3 {
     font-size: 1.3rem;
@@ -202,19 +197,7 @@ button:hover,
     color: #333;
     margin-bottom: 18px;
 }
-.project-card button {
-    background: #007BFF;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-family: inherit;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    margin: 40px 0 0 0;
-    transition: background-color 0.3s, transform 0.2s;
-}
+
 .project-card button:hover {
     background-color: #0056b3;
     transform: translateY(-2px) scale(1.04);
