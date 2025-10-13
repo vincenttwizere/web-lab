@@ -82,10 +82,7 @@ button {
 button:hover {
         background-color: #0056b3;
     }
-
-
-/* Place below your existing styles in styles.css */
-
+    
 /* Consistent button styles across all sections */
 button,
 .project-card button,
@@ -136,14 +133,11 @@ button:hover,
 }
 .about-content {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 40px;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 24px;
-    padding-right: 24px;
+    gap: 400px;
+    max-width: 100%;
 }
 .about-img {
     width: 220px;
