@@ -1,0 +1,317 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 20px 20px;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.navbar ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: light;
+}
+.navbar ul li a:hover {
+    color: #007BFF;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: row;  
+    height: 80vh;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+ img {
+    width: 280px;
+
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    margin-top: 20px;
+    z-index: 3;
+
+}
+
+    img:hover {
+        transform: scale(1.05);
+    }
+
+button {
+    padding: 10px 20px;
+    margin-top: 40px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+        background-color: #0056b3;
+    }
+
+
+/* Place below your existing styles in styles.css */
+
+/* Consistent button styles across all sections */
+button,
+.project-card button,
+.contact-form button {
+    padding: 10px 20px;
+    margin: 40px 0 0 0; /* Top margin only, no left/right for consistency */
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    font-size: 1rem;
+    font-family: inherit;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+button:hover,
+.project-card button:hover,
+.contact-form button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px) scale(1.04);
+}
+
+/* Consistent left and right margins for main content */
+.container,
+.about-content,
+.projects-container,
+.contact-form {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+/* About Section */
+#about {
+    background: #f7f7f7;
+    padding: 60px 0;
+    text-align: center;
+}
+#about h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.about-img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+.about-content p {
+    font-size: 1.1rem;
+    color: #222;
+    text-align: left;
+    line-height: 1.7;
+    max-width: 400px;
+}
+
+/* Projects Section */
+#projects {
+    background: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+#projects h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.projects-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.project-card {
+    background: #f7f7f7;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    padding: 30px 24px;
+    width: 280px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: box-shadow 0.3s;
+}
+.project-card:hover {
+    box-shadow: 0 8px 24px rgba(44, 62, 80, 0.15);
+}
+.project-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+.project-card p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 18px;
+}
+.project-card button {
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: inherit;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin: 40px 0 0 0;
+    transition: background-color 0.3s, transform 0.2s;
+}
+.project-card button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px) scale(1.04);
+}
+
+/* Contact Section */
+#contact {
+    background: #f7f7f7;
+    padding: 60px 0;
+    text-align: center;
+}
+#contact h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.contact-form {
+    background: #fff;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 32px 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.contact-form label {
+    font-size: 1rem;
+    color: #222;
+    margin-bottom: 4px;
+    text-align: left;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+.contact-form button {
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin: 40px 0 0 0;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+.contact-form button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px) scale(1.04);
+}
+
+/* Footer */
+footer {
+    background: #229954;
+    color: #fff;
+    padding: 32px 0 16px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+footer p {
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 8px;
+}
+.social-icons a img {
+    width: 28px;
+    height: 28px;
+    filter: grayscale(1) brightness(1.2);
+    transition: filter 0.2s;
+}
+.social-icons a img:hover {
+    filter: none;
+}

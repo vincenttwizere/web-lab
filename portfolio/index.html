@@ -3,23 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <!-- Header Section -->
-    <header>
-        <div class="logo">Your Name</div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <header class="header" id ="header">
+        <div class="logo">MY BRAND</div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
     </header>
 
     <!-- Home Section (optional anchor) -->
-    <section id="home"></section>
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2>Hello, I'm Vincent</h2>
+                <p>Aspiring Web Developer</p>
+                <p>I am a web developer with experience in fronted and backend</p>        
+                <button>Get in Touch</button>
+            </div>
+            <div class="hero-image">
+
+                <img src="./Assets/personal profile 2.png" alt="Your Name" class="home-img">
+            </div>
+        </div>
+    </section>
 
     <!-- About Section -->
     <section id="about">
@@ -27,7 +45,7 @@
         <div class="about-content">
             <img src="your-image.jpg" alt="Your Name" class="about-img">
             <p>
-                Hello! I'm [Your Name], a passionate developer. I love building web applications and learning new technologies.
+                Hello! I'm Vincent TWIZERE, a passionate developer. I love building web applications and learning new technologies.
             </p>
         </div>
     </section>
@@ -73,12 +91,15 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Your Name. All rights reserved.</p>
+        <p>&copy; 2025 vincent. All rights reserved.</p>
         <div class="social-icons">
             <a href="#"><img src="icon-facebook.png" alt="Facebook"></a>
             <a href="#"><img src="icon-twitter.png" alt="Twitter"></a>
             <a href="#"><img src="icon-linkedin.png" alt="LinkedIn"></a>
         </div>
     </footer>
+
+    <!-- script -->
+    <script src="script.js"></script>
 </body>
 </html>
