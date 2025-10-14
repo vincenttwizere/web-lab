@@ -285,3 +285,22 @@ footer .social-icons  {
     justify-content: center;
     gap: 20px;
 }
+
+/* responsiveness */
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: white;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 20px 0;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  }
+}
