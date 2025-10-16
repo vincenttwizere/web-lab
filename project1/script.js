@@ -8,7 +8,5 @@ document.getElementById('btn').onclick = function(){
 
     document.getElementById('result').textContent = `RESULT: ${circumference}`;
     document.getElementById('result').style.color = 'black';
-    document.getElementById('result').style.fontWeight = 'bolder';
-    
-
+    document.getElementById('result').style.fontWeight = 'bolder'; 
 };

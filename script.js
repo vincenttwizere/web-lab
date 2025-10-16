@@ -125,19 +125,48 @@
 // writing a simple program that calculate the circumference of a circle
 
 
-const prompt = require('prompt-sync')();
+// const prompt = require('prompt-sync')();
 
-const PI = 3.14;
-let area;
-let diameter;
-let radius = prompt('enter the radius of the circle:');
-radius = Number(radius);
+// const PI = 3.14;
+// let area;
+// let diameter;
+// let radius = prompt('enter the radius of the circle:');
+// radius = Number(radius);
 
-let circumference = 2 * PI * radius;
-console.log(`the circumference of a cricle with a radius of ${radius} is ${circumference}`);
+// let circumference = 2 * PI * radius;
+// console.log(`the circumference of a cricle with a radius of ${radius} is ${circumference}`);
 
-area = PI * radius ** 2;
-console.log(`the area of a circle with a radius of ${radius} is ${area}`);
+// area = PI * radius ** 2;
+// console.log(`the area of a circle with a radius of ${radius} is ${area}`);
 
-diameter = 2 * radius;
-console.log(` the diameter of a circle with a radius of ${radius} is ${diameter}`);
+// diameter = 2 * radius;
+// console.log(` the diameter of a circle with a radius of ${radius} is ${diameter}`);
+
+// Navbar toggle (responsive hamburger)
+document.addEventListener('DOMContentLoaded', function () {
+  const btn = document.querySelector('.hamburger');
+  const navWrap = document.querySelector('.navbar-links-wrapper');
+
+  if (!btn || !navWrap) return;
+
+  btn.addEventListener('click', () => {
+    const opened = navWrap.classList.toggle('open');
+    btn.setAttribute('aria-expanded', opened ? 'true' : 'false');
+  });
+
+  // close when a link is clicked
+  navWrap.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      navWrap.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // close when resizing to wide screens
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      navWrap.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
