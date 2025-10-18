@@ -168,3 +168,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+// end of navbar toggle
+// Initialize variables
+let has_license = true;
+let has_space = false;
+let has_experience = true;
+
+// Calculate conditions
+let can_sell_regular_pet = (has_license || has_experience) && has_space;
+let can_sell_exotic_pet = has_license && has_experience && has_space;
+let cannot_sell_any_pet = (!has_license && !has_experience) || !has_space;
+
+console.log("can_sell_regular_pet:", can_sell_regular_pet);
+console.log("can_sell_exotic_pet:", can_sell_exotic_pet);
+console.log("cannot_sell_any_pet:", cannot_sell_any_pet);
