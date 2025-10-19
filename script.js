@@ -183,3 +183,21 @@ let cannot_sell_any_pet = (!has_license && !has_experience) || !has_space;
 console.log("can_sell_regular_pet:", can_sell_regular_pet);
 console.log("can_sell_exotic_pet:", can_sell_exotic_pet);
 console.log("cannot_sell_any_pet:", cannot_sell_any_pet);
+
+// conditional statements
+
+let temperature = 25;
+let message = ""; // Set the message based on temperature
+
+// Add your if statements below
+if (temperature > 30){
+    message = 'Too hot!';
+};
+
+if (temperature < 10){
+    message = '!Too cold';
+};
+
+if ( temperature >= 10 && temperature <= 30){
+    message = 'Just right!';
+};
