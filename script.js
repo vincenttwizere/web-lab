@@ -201,3 +201,21 @@ if (temperature < 10){
 if ( temperature >= 10 && temperature <= 30){
     message = 'Just right!';
 };
+
+// if else condition
+
+let wind = parseInt(inp); // Don't change this line
+let condition = "unset";
+// Type your code below
+if ( wind < 8){
+    condition = 'Calm';
+} else if (wind >= 8 && wind <= 31){
+    condition = 'Breeze';
+} else if ( wind >= 32 && wind <= 63){
+    condition = 'Gale';
+} else {
+    condition = 'Storm';
+}
+
+// Don't change the line below
+console.log(`condition = ${condition}`);
