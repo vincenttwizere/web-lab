@@ -204,7 +204,7 @@ if ( temperature >= 10 && temperature <= 30){
 
 // if else condition
 
-let wind = parseInt(inp); // Don't change this line
+let wind = parseInt(inp);
 let condition = "unset";
 // Type your code below
 if ( wind < 8){
@@ -219,3 +219,11 @@ if ( wind < 8){
 
 // Don't change the line below
 console.log(`condition = ${condition}`);
+
+// while loop
+
+let number = parseFloat(inp); 
+while (number <= 100){
+    number *= 2;
+}
+console.log(number);
