@@ -1,8 +1,20 @@
+// Add event listeners when the document loads
+document.addEventListener('DOMContentLoaded', () => {
+    // Add event listeners for operator buttons
+    document.getElementById('add').addEventListener('click', () => calculate('+'));
+    document.getElementById('subtract').addEventListener('click', () => calculate('-'));
+    document.getElementById('multiply').addEventListener('click', () => calculate('*'));
+    document.getElementById('divide').addEventListener('click', () => calculate('/'));
+    document.getElementById('clear').addEventListener('click', clearCalculator);
+});
+
 function calculate(operator) {
+    // Get input values
     const num1 = parseFloat(document.getElementById('num1').value);
     const num2 = parseFloat(document.getElementById('num2').value);
     const resultDiv = document.getElementById('result');
 
+    // Validate input
     if (isNaN(num1) || isNaN(num2)) {
         resultDiv.innerHTML = 'Please enter valid numbers';
         resultDiv.style.color = 'red';
@@ -10,6 +22,7 @@ function calculate(operator) {
     }
 
     let result;
+    // Perform calculation based on operator
     switch(operator) {
         case '+':
             result = num1 + num2;
@@ -28,13 +41,20 @@ function calculate(operator) {
             }
             result = num1 / num2;
             break;
+        default:
+            resultDiv.innerHTML = 'Invalid operator';
+            resultDiv.style.color = 'red';
+            return;
     }
 
-    resultDiv.innerHTML = `Result: ${result}`;
+    // Display result with 2 decimal places if it's not a whole number
+    const formattedResult = Number.isInteger(result) ? result : result.toFixed(2);
+    resultDiv.innerHTML = `Result: ${formattedResult}`;
     resultDiv.style.color = '#333';
 }
 
 function clearCalculator() {
+    // Clear input fields and reset result
     document.getElementById('num1').value = '';
     document.getElementById('num2').value = '';
     document.getElementById('result').innerHTML = 'Result: ';
