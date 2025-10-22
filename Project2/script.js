@@ -47,10 +47,13 @@ function calculate(operator) {
             return;
     }
 
-    // Display result with 2 decimal places if it's not a whole number
-    const formattedResult = Number.isInteger(result) ? result : result.toFixed(2);
+    // Display result with up to 6 significant digits (avoid long floats)
+    const formattedResult = Number.isInteger(result) ? String(result) : parseFloat(result.toPrecision(6));
     resultDiv.innerHTML = `Result: ${formattedResult}`;
-    resultDiv.style.color = '#333';
+    resultDiv.style.color = '#0f172a';
+
+    // Add to history
+    addHistory(`${num1} ${operator} ${num2} = ${formattedResult}`);
 }
 
 function clearCalculator() {
@@ -59,4 +62,17 @@ function clearCalculator() {
     document.getElementById('num2').value = '';
     document.getElementById('result').innerHTML = 'Result: ';
     document.getElementById('result').style.color = '#333';
+    // clear history as well when clear plus-shift is used? keep simple: do not clear history here
+}
+
+// History utilities
+function addHistory(text){
+    const list = document.getElementById('historyList');
+    if (!list) return;
+    const li = document.createElement('li');
+    li.textContent = text;
+    li.className = 'history-item';
+    list.prepend(li);
+    // keep history length reasonable
+    while(list.children.length > 10) list.removeChild(list.lastChild);
 }
