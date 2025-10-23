@@ -59,22 +59,36 @@ body {
     .navbar {
         position: fixed;
         top: 0;
-        right: -100%;
+        right: 0;
         width: 70%;
         height: 100vh;
         background: white;
         padding: 80px 20px;
-        transition: 0.4s ease-in-out;
-        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+        /* use transform for smoother GPU-accelerated animation */
+        transform: translateX(100%);
+        transition: transform 0.35s cubic-bezier(.2,.9,.2,1);
+        box-shadow: -2px 0 10px rgba(0,0,0,0.12);
+        z-index: 9999; /* ensure it sits above header and content */
     }
 
     .navbar.active {
-        right: 0;
+        transform: translateX(0);
     }
 
     .navbar ul {
         flex-direction: column;
         align-items: center;
+    }
+
+    /* ensure links are visible on white background */
+    .navbar ul li a {
+        color: #0f172a !important;
+        font-size: 1.15rem;
+        font-weight: 600;
+        padding: 12px 18px;
+        display: block;
+        background: transparent;
+        text-shadow: 0 1px 4px rgba(0,0,0,0.08);
     }
 
     .navbar ul li {
@@ -84,6 +98,24 @@ body {
     /* Menu toggle animation */
     .menu-toggle.active {
         color: #007BFF;
+    }
+
+    .navbar {
+        background: #fff !important;
+    }
+    .navbar ul li a {
+        color: #222 !important;
+        font-size: 1.2rem;
+        font-weight: 700;
+        padding: 16px 24px;
+        display: block;
+        background: transparent !important;
+        text-shadow: none !important;
+        border-radius: 6px;
+    }
+    .navbar ul li a:hover {
+        background: #f0f0f0 !important;
+        color: #007BFF !important;
     }
 }
 
@@ -336,7 +368,7 @@ footer .social-icons  {
     display: block;
   }
   .navbar ul {
-    display: none;
+    display: visible;
     flex-direction: column;
     width: 100%;
     background: white;
