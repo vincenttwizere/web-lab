@@ -196,7 +196,7 @@ button:hover,
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 400px;
+    gap: 120px; /* reduced from 400px for better responsiveness */
     max-width: 100%;
 }
 .about-img {
@@ -226,22 +226,54 @@ button:hover,
 }
 
 @media (max-width: 900px) {
-  .about-img {
-    width: 180px;
-    height: 180px;
-    border-width: 3px;
-    max-width: 70vw;
-    max-height: 70vw;
-  }
+    .about-img {
+        width: 240px;
+        height: 240px;
+        border-width: 3px;
+    }
 }
-@media (max-width: 600px) {
-  .about-img {
-    width: 120px;
-    height: 120px;
-    border-width: 2px;
-    max-width: 50vw;
-    max-height: 50vw;
-  }
+
+@media (max-width: 768px) {
+    /* Stack about content on medium/small screens */
+    .about-content {
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+        padding: 0 16px;
+    }
+
+    .about-content p {
+        max-width: 90%;
+        text-align: center;
+        font-size: 1.02rem;
+    }
+
+    .about-img {
+        width: 220px;
+        height: 220px;
+        margin-bottom: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Small screens: keep image large enough for visibility, center everything */
+    #about {
+        padding: 28px 10px;
+    }
+
+    .about-content {
+        gap: 16px;
+    }
+
+    .about-img {
+        width: 180px;
+        height: 180px;
+        border-width: 3px;
+    }
+
+    .about-content p {
+        font-size: 0.98rem;
+    }
 }
 .about-content p {
     font-size: 1.1rem;
