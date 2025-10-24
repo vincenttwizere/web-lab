@@ -511,14 +511,19 @@ footer .social-icons  {
 }
 
 .home-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 30%;  /* Move image down */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -40%);  /* Adjust vertical position */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Move the image slightly up so the top/head is visible in the circular frame. */
+    object-position: center 12%;
+    position: static;
+    transform: none;
+    display: block; /* remove inline baseline gap */
+}
+
+/* hide the inline hero image by default (only show on small screens via media queries) */
+.hero-inline {
+    display: none;
 }
 
 @media (max-width: 900px) {
@@ -549,14 +554,27 @@ footer .social-icons  {
     gap: 24px;
   }
   .hero-text {
-    order: 1;
-    text-align: center;
-    padding: 0 12px;
+        order: 1;
+        text-align: center;
+        padding: 0 16px; /* equal left/right padding */
   }
   .hero-image {
     order: 2;
     margin-top: 16px;
   }
+    /* hide the original side image and show inline image after heading */
+    .hero-image {
+        display: none;
+    }
+    .hero-inline {
+        display: block;
+        margin: 12px auto 0 auto;
+        width: 220px;
+        height: 220px;
+        border-width: 3px;
+        /* removed internal padding to let the image fill the circular container
+           (use margin for outside spacing instead). */
+    }
 }
 @media (max-width: 600px) {
   .hero-content {
@@ -567,12 +585,21 @@ footer .social-icons  {
     gap: 16px;
   }
   .hero-text {
-    order: 1;
-    text-align: center;
-    padding: 0 6px;
+        order: 1;
+        text-align: center;
+        padding: 0 16px; /* equal left/right padding */
   }
   .hero-image {
     order: 2;
     margin-top: 12px;
   }
+    .hero-image { display: none; }
+    .hero-inline {
+        display: block;
+        width: 180px;
+        height: 180px;
+        margin: 10px auto 0 auto;
+        border-width: 2px;
+        /* removed internal padding so the image fills the container cleanly */
+    }
 }
