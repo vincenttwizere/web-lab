@@ -128,6 +128,29 @@ body {
     margin: 20px;
 }
 
+/* Hero CTA: default (large screens) - stack vertically; small-screen layout moves to flex within media queries */
+.hero-cta {
+    display: block;
+    margin-top: 16px; /* small spacing from text */
+}
+
+.hero-cta .social-icons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.hero-cta .social-icons a i {
+    font-size: 1.8rem;
+    line-height: 1;
+    color: #333;
+    transition: color 0.2s, font-size 0.3s ease;
+}
+
+.hero-cta .social-icons a:hover i {
+    color: #007BFF;
+}
+
 button {
     padding: 10px 20px;
     margin-top: 40px;
@@ -558,6 +581,9 @@ footer .social-icons  {
         text-align: center;
         padding: 0 16px; /* equal left/right padding */
   }
+  .hero-cta .social-icons a i {
+        font-size: 1.5rem; /* reduced size for tablets */
+  }
   .hero-image {
     order: 2;
     margin-top: 16px;
@@ -575,6 +601,21 @@ footer .social-icons  {
         /* removed internal padding to let the image fill the circular container
            (use margin for outside spacing instead). */
     }
+    /* make hero CTA horizontal on small screens */
+    .hero-cta {
+        display: flex;
+        align-items: center;
+        gap: 32px; /* increased gap between button and icons */
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        text-align: left;
+        width: 100%;
+        padding: 0 16px; /* match hero text padding */
+    }
+    .hero-cta button {
+        margin: 0;
+        padding: 10px 18px;
+    }
 }
 @media (max-width: 600px) {
   .hero-content {
@@ -589,6 +630,9 @@ footer .social-icons  {
         text-align: center;
         padding: 0 16px; /* equal left/right padding */
   }
+  .hero-cta .social-icons a i {
+        font-size: 1.2rem; /* smaller size for mobile */
+  }
   .hero-image {
     order: 2;
     margin-top: 12px;
@@ -601,5 +645,16 @@ footer .social-icons  {
         margin: 10px auto 0 auto;
         border-width: 2px;
         /* removed internal padding so the image fills the container cleanly */
+    }
+    .hero-cta {
+        display: flex;
+        align-items: center;
+        gap: 28px; /* increased gap for better spacing */
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .hero-cta button {
+        margin: 0;
+        padding: 8px 14px;
     }
 }
