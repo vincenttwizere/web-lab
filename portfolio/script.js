@@ -78,5 +78,146 @@ function initializeNavigation() {
     }
 }
 
+// Form Validation and Contact Form Handling
+function initializeContactForm() {
+    const contactForm = document.getElementById('contactForm');
+    const contactSuccess = document.getElementById('contactSuccess');
+    const sendAnotherBtn = document.getElementById('sendAnotherBtn');
+    
+    if (!contactForm) return;
+
+    // Form validation
+    function validateForm() {
+        const name = document.getElementById('name');
+        const email = document.getElementById('email');
+        const message = document.getElementById('message');
+        
+        let isValid = true;
+        
+        // Clear previous errors
+        clearErrors();
+        
+        // Validate name
+        if (!name.value.trim()) {
+            showError('name', 'Name is required');
+            isValid = false;
+        }
+        
+        // Validate email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!email.value.trim()) {
+            showError('email', 'Email is required');
+            isValid = false;
+        } else if (!emailRegex.test(email.value)) {
+            showError('email', 'Please enter a valid email address');
+            isValid = false;
+        }
+        
+        // Validate message
+        if (!message.value.trim()) {
+            showError('message', 'Message is required');
+            isValid = false;
+        }
+        
+        return isValid;
+    }
+    
+    function showError(fieldId, message) {
+        const field = document.getElementById(fieldId);
+        const errorElement = document.getElementById(fieldId + 'Error');
+        
+        if (field && errorElement) {
+            field.classList.add('error');
+            errorElement.textContent = message;
+        }
+    }
+    
+    function clearErrors() {
+        const errorElements = document.querySelectorAll('.error-message');
+        const errorFields = document.querySelectorAll('.contact-form input, .contact-form textarea');
+        
+        errorElements.forEach(element => {
+            element.textContent = '';
+        });
+        
+        errorFields.forEach(field => {
+            field.classList.remove('error');
+        });
+    }
+    
+    function showSuccessMessage() {
+        contactForm.style.display = 'none';
+        contactSuccess.style.display = 'block';
+    }
+    
+    function resetForm() {
+        contactForm.reset();
+        clearErrors();
+        contactForm.style.display = 'flex';
+        contactSuccess.style.display = 'none';
+    }
+    
+    // Form submission
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        if (validateForm()) {
+            // Simulate form submission
+            setTimeout(() => {
+                showSuccessMessage();
+            }, 500);
+        }
+    });
+    
+    // Send another message button
+    if (sendAnotherBtn) {
+        sendAnotherBtn.addEventListener('click', resetForm);
+    }
+    
+    // Real-time validation
+    const formFields = contactForm.querySelectorAll('input, textarea');
+    formFields.forEach(field => {
+        field.addEventListener('blur', function() {
+            if (this.value.trim()) {
+                this.classList.remove('error');
+                const errorElement = document.getElementById(this.id + 'Error');
+                if (errorElement) {
+                    errorElement.textContent = '';
+                }
+            }
+        });
+    });
+}
+
+// Skill Bar Animation
+function initializeSkillBars() {
+    const skillBars = document.querySelectorAll('.skill-progress');
+    
+    const observerOptions = {
+        threshold: 0.5,
+        rootMargin: '0px 0px -100px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const skillBar = entry.target;
+                const width = skillBar.getAttribute('data-width');
+                skillBar.style.setProperty('--target-width', width);
+                skillBar.style.width = width;
+                observer.unobserve(skillBar);
+            }
+        });
+    }, observerOptions);
+    
+    skillBars.forEach(skillBar => {
+        observer.observe(skillBar);
+    });
+}
+
 // Initialize when DOM is loaded
-document.addEventListener('DOMContentLoaded', initializeNavigation);
+document.addEventListener('DOMContentLoaded', function() {
+    initializeNavigation();
+    initializeContactForm();
+    initializeSkillBars();
+});
